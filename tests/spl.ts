@@ -25,12 +25,12 @@ describe("spl program test", () => {
 
 
   const metadata = {
-    name: "Sabrina v2",
-    symbol: "SABRINA",
-    uri: "https://atrix.dev/api/tokens/sabrina",
+    name: "Trump",
+    symbol: "TRUMP",
+    uri: "https://atrix.dev/api/tokens/trump",
     decimals: 9,
   };
-  const mintAmount = 853900000;
+  const mintAmount = 1000;
 
   const [mint] = web3.PublicKey.findProgramAddressSync(
     [Buffer.from(MINT_SEED)],
@@ -91,6 +91,8 @@ describe("spl program test", () => {
       // Token account not yet initiated has 0 balance
       initialBalance = 0;
     }
+
+    console.log("initialBalance", initialBalance);
 
     const context = {
       mint,
