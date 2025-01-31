@@ -4,6 +4,7 @@ import assert from "assert";
 import BN from "bn.js";
 import { Spl } from "../target/types/spl";
 
+
 describe("spl program test", () => {
   // Configure the client to use the local cluster.
   anchor.setProvider(anchor.AnchorProvider.env());
@@ -11,6 +12,7 @@ describe("spl program test", () => {
   const program = anchor.workspace.Spl as anchor.Program<Spl>;
 
   const METADATA_SEED = "metadata";
+
   // default metaplex program id
   const TOKEN_METADATA_PROGRAM_ID = new web3.PublicKey(
     "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s"
@@ -18,13 +20,17 @@ describe("spl program test", () => {
 
   const MINT_SEED = "mint";
   const payer = program.provider.publicKey;
+
+
+
+
   const metadata = {
-    name: "Atrix Token",
-    symbol: "ATRIX",
-    uri: "https://arweave.net/Xjqaj_rYYQGrsiTk9JRqpguA813w6NGPikcRyA1vAHM",
+    name: "Sabrina v2",
+    symbol: "SABRINA",
+    uri: "https://atrix.dev/api/tokens/sabrina",
     decimals: 9,
   };
-  const mintAmount = 10;
+  const mintAmount = 853900000;
 
   const [mint] = web3.PublicKey.findProgramAddressSync(
     [Buffer.from(MINT_SEED)],

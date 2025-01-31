@@ -1,5 +1,5 @@
 {
-  "name": "Meme Coin Creator Project X",
+  "name": "spl",
   "version": "1.0.0",
   "description": "A project for managing SPL tokens on the Solana blockchain",
   "license": "ISC",
@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@coral-xyz/anchor": "^0.30.1",
-    "@solana/spl-token": "^0.4.9"
+    "@sanity/client": "^6.27.2",
+    "@solana/spl-token": "^0.4.9",
+    "nft.storage": "^7.2.0"
   },
   "devDependencies": {
     "@types/bn.js": "^5.1.0",
